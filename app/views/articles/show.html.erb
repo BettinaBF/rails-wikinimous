@@ -1,0 +1,19 @@
+<div class= "container">
+<div>
+  <div  class="row">
+    <div class="col-sm-10">
+      <h3>Wiki Wierd Articles</h3>
+    </div>
+  </div>
+</div>
+  <div  class="row">
+    <div class="col-sm">
+      <h2><%= @article.title %>
+        <a href= <%=edit_article_path(@article)%> ><i class="fas fa-pencil-alt"></i></a>
+        <a data-method= "delete" href= <%=article_path%> ><i class="fas fa-trash-alt"></i></a>
+      </h2>
+      <img src="https://source.unsplash.com/random" alt="">
+      <p><%= markdown(@article.content)%></p>
+    </div>
+  </div>
+</div>
